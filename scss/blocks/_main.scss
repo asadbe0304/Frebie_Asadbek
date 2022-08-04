@@ -1,0 +1,141 @@
+.site-main {
+    margin: 0;
+    padding: 0;
+}
+
+.hero {
+    position: relative;
+    margin: 0 auto;
+    padding: 150px 0 19px 0;
+    max-width: 1240px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero__top {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: tracking 2.5s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+
+}
+
+.hero__title {
+    margin: 0;
+    padding: 0;
+    font-family: 'Oswald';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 72px;
+    line-height: 104px;
+    display: flex;
+    align-items: flex-end;
+    text-align: center;
+    letter-spacing: 4.608px;
+    color: #FFFFFF;
+}
+
+.hero__text {
+    margin: 24px 0 300px 0;
+    padding: 0;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 23px;
+    display: flex;
+    align-items: flex-end;
+    text-align: center;
+    letter-spacing: 1.28px;
+    color: #FFFFFF;
+    opacity: 0.8;
+}
+
+.hero__bottom {
+    position: absolute;
+    top: 400px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 5;
+    margin: 0 auto;
+    padding: 0;
+    width: 95px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.number {
+    margin: 0;
+    padding: 0;
+    font-family: 'Oswald';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 27px;
+    display: flex;
+    align-items: flex-end;
+    letter-spacing: 1.152px;
+    color: rgba(255, 255, 255, 0.437245);
+    transition: all 0.3s ease-in-out;
+}
+
+// span:first-child {
+//     font-family: 'Oswald';
+//     font-style: normal;
+//     font-weight: 700;
+//     font-size: 36px;
+//     line-height: 44px;
+//     display: flex;
+//     align-items: flex-end;
+//     letter-spacing: 2.304px;
+//     color: #FFFFFF;
+// }
+.number:hover {
+    font-size: 36px;
+    line-height: 44px;
+    color: #FFFFFF;
+}
+
+@keyframes tracking {
+    0% {
+        letter-spacing: 1em;
+        transform: translateZ(300px) translateY(200px);
+        opacity: 0;
+    }
+
+    40% {
+        opacity: 0.6;
+    }
+
+    100% {
+        transform: translateZ(0) translateY(0);
+        opacity: 1;
+    }
+}
+
+@media screen and(max-width:1020px) {
+    .hero__title {
+        font-size: 48px;
+        line-height: 48px;
+    }
+
+    .hero__text {
+        font-size: 15px;
+        line-height: 20px;
+    }
+}
+@media screen and(max-width:470px) {
+    .hero__title{
+        font-size: 32px;
+        line-height: 32px;
+    }
+    .hero__text{
+font-size: 15px;
+    }
+    
+}
