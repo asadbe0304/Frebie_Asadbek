@@ -347,7 +347,7 @@ body {
   padding: 0;
   font-family: "Oswald", sans-serif;
   font-family: "Open-sans", sans-serif;
-  background-image: url(.././images/image1.png) !important;
+  background-image: url(../images/image1.png);
   background-repeat: no-repeat;
   background-position: top;
   background-size: 100% 904px;
@@ -358,6 +358,23 @@ img {
      object-fit: cover;
 }
 
+@media screen and (max-width: 1020px) {
+  body {
+    background-image: url(../images/IMG_20220804_225427_299.jpg);
+    background-size: 100% 760px;
+  }
+}
+@media screen and (max-width: 510px) {
+  body {
+    background-image: url(../images/IMG_20220804_225427_039.jpg);
+    background-size: 100% 790px;
+  }
+}
+@media screen and (max-width: 450px) {
+  body {
+    background-size: 100% 750px;
+  }
+}
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -399,14 +416,22 @@ img {
 }
 
 .header__item {
-  padding: 0 0 0 5px;
-  border-width: 17px;
-  border: none;
-  border-bottom: 2px solid #4CAF50;
+  position: relative;
 }
 
-.header__item:first-child {
-  border-bottom: 2px solid #4CAF50;
+.header__item::after {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  content: " ";
+  width: 17px;
+  height: 2px;
+  display: block;
+  background: #4CAF50;
+}
+
+.header__item:first-child::after {
+  width: 54px;
 }
 
 .header__item + .header__item {
@@ -427,8 +452,8 @@ img {
 }
 
 .header__item--link:hover {
-  -webkit-animation: tracking-in-contract 2s cubic-bezier(0.215, 0.61, 0.355, 1) both;
-          animation: tracking-in-contract 2s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+  -webkit-animation: color 2s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+          animation: color 2s cubic-bezier(0.215, 0.61, 0.355, 1) both;
 }
 
 .hamburger {
@@ -436,31 +461,47 @@ img {
   display: none;
 }
 
-@-webkit-keyframes tracking-in-contract {
+@-webkit-keyframes color {
   0% {
     letter-spacing: 15px;
-    opacity: 0;
+    opacity: 1;
+    border-bottom: 2px solid #4CAF50;
   }
   40% {
-    opacity: 0.7;
+    border-bottom: 2px solid #4CAF50;
+  }
+  75% {
+    border-bottom: 2px solid #4CAF50;
+  }
+  83% {
+    border-bottom: 2px solid #4CAF50;
   }
   100% {
     letter-spacing: normal;
     opacity: 1;
+    border: none;
   }
 }
 
-@keyframes tracking-in-contract {
+@keyframes color {
   0% {
     letter-spacing: 15px;
-    opacity: 0;
+    opacity: 1;
+    border-bottom: 2px solid #4CAF50;
   }
   40% {
-    opacity: 0.7;
+    border-bottom: 2px solid #4CAF50;
+  }
+  75% {
+    border-bottom: 2px solid #4CAF50;
+  }
+  83% {
+    border-bottom: 2px solid #4CAF50;
   }
   100% {
     letter-spacing: normal;
     opacity: 1;
+    border: none;
   }
 }
 @media screen and (max-width: 820px) {
@@ -616,7 +657,7 @@ img {
 }
 .site-article {
   margin: 0;
-  padding: 135px 0 115px 0;
+  padding: 115px 0 115px 0;
 }
 
 .article {
